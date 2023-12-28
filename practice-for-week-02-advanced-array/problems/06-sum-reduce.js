@@ -14,7 +14,15 @@ console.log(sumWithReduce([])); // 0
 
 let sumWithReduce = function(nums) {
   // Your code here
+  if(nums.length === 0) {
+    return 0;
+  }
+  let total = nums.reduce(function(accum, element) {
+    return accum + element;
+  });
+  return total;
 };
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

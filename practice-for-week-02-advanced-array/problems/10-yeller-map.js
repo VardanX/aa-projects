@@ -14,7 +14,13 @@ console.log(yeller(['kiwi', 'orange', 'mango'])); // [ 'KIWI!', 'ORANGE!', 'MANG
 
 let yeller = function(words) {
   // Your code here
+  let exclamationWord = words.map(function(ele){
+    return ele.toUpperCase() + "!";
+  });
+  return exclamationWord;
 };
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
@@ -22,4 +28,4 @@ try {
   module.exports = yeller;
 } catch (e) {
   module.exports = null;
-}
+}

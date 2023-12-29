@@ -27,8 +27,16 @@ console.log(twoDimensionalProduct(arr2)); // 88
 
 let twoDimensionalProduct = function(arr) {
     // Your code here
+  let outer = arr.reduce(function(acc, ele) {
+    let inner = ele.reduce(function(acc, ele) {
+      return acc * ele;
+    });
+    return acc * inner;
+  }, 1);
+  return outer;
 };
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
+
 
 try {
     module.exports = twoDimensionalProduct;

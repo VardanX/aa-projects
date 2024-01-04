@@ -11,7 +11,13 @@ restSum(0); // => 0
 
 function restSum(...otherNums) {
   // Your code here
+  let total = otherNums.reduce(function(accum, ele) {
+    accum += ele
+    return accum;
+  });
+  return total
 }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = restSum;

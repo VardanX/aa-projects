@@ -7,12 +7,14 @@ Examples:
 
 let obj1 = {bootcamp: 'App Academy', course: 'Bootcamp Prep'}
 doesKeyExist(obj1, 'course'); // => true
-doesKeyExist(obj1, 'name'); // => false
+doesKeyExist(obj1, 'course') // => false
 ***********************************************************************/
 
 function doesKeyExist(obj, key) {
   // Your code here
+  return key in obj;
 }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = doesKeyExist;

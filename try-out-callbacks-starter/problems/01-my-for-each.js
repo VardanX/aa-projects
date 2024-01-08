@@ -21,11 +21,21 @@ myForEach(['laika', 'belka'], function (el) {
 console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
 
-let myForEach = function() {
-
+let myForEach = function(array, cb) {
+    for(let i = 0; i < array.length; i++) {
+        cb(array[i], i);
+    }
 };
 
+myForEach(["a", "b", "c"], function(ele, i) {
+    console.log(ele + " is at index " + i);
+});
 
+let test = [];
+myForEach(['laika', 'belka'], function (el) {
+    test.push(el.toUpperCase());
+});
+console.log(test); // ['LAIKA', 'BELKA']
 
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

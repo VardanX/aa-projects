@@ -9,8 +9,17 @@ mirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a
 ***********************************************************************/
 
 const mirrorArray = (array) => {
-  // Your code here
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(array[i]);
+  }
+
+  for (let j = array.length - 1; j >= 0; j--) {
+    newArray.push(array[j]);
+  }
+  return newArray;
 };
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = mirrorArray;

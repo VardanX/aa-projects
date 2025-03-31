@@ -24,7 +24,21 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 function lazyAdder(firstNum) {
   // Your code here
+  return function(secondNum){
+    return function(thirdNum){
+      return firstNum + secondNum + thirdNum;
+    }
+  }
 }
+
+const lazyAdderTwo = firstNum => secondNum => thirdNum => firstNum + secondNum + thirdNum;
+// onliner fatarrow function of the above function
+
+let func1 = lazyAdder(10);
+let func2 = func1(20);
+let total = func2(3);
+console.log(total);
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

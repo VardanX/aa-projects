@@ -26,6 +26,8 @@ Example 3:
 ***********************************************************************/
 function coinCollector(numCoins) {
   // Your code here
+  
+
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

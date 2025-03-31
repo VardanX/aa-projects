@@ -17,7 +17,24 @@ console.log(fame(["a", "f", "z", "b"])); // returns [ 'f', 'a' ]
 
 function plannedIntersect(firstArr) {
   // Your code here
+  let commonElementArray = [];
+  return function(secondArray){
+    for(let i = 0; i < firstArr.length; i++){
+      for(let j = 0; j < secondArray.length; j++){
+        if (firstArr[i] === secondArray[j]) {
+          commonElementArray.push(secondArray[j]);
+        }
+      }
+    }
+    return commonElementArray;
+  }
 }
+let abc = plannedIntersect(["a", "b", "c"]); // returns a function
+console.log(abc(["b", "d", "c"])); // returns [ 'b', 'c' ]
+
+let fame = plannedIntersect(["f", "a", "m", "e"]); // returns a function
+console.log(fame(["a", "f", "z", "b"])); // returns [ 'f', 'a' ]
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 try {

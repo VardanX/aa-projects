@@ -27,10 +27,18 @@ function recVolume(height) {
   // Your code here
   let volume = 1;
   volume *= height
-  return function volume(...property){
-    for(let i = 0; i < 2; i++) {
-      volume *= property[i]
+  let width;
+  let length ;
+  return function vol(param){
+    if(width === undefined) {
+      width = param
+      return vol;
+    }else if(length === undefined){
+      length = param
+      volume *= width * length;
+      return volume;
     }
+    return volume;
   }
 }
 

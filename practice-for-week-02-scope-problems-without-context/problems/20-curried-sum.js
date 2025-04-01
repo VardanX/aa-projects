@@ -44,7 +44,24 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 function curriedSum(numArgs) {
   // Your code here
+  let sum = 0;
+  let count = 0
+  return function adder(num){
+    sum += num;
+    count++;
+    if(count === numArgs){
+      return sum
+    }
+    return adder
+  }
 }
+
+
+const sum = curriedSum(4); // returns a function
+sum(5) // returns a function
+sum(20) // returns a function
+sum(30) // returns a function
+console.log(sum(20)); // => returns 75
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = curriedSum;

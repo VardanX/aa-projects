@@ -24,11 +24,35 @@ Example 3:
   console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 
 ***********************************************************************/
-function coinCollector(numCoins) {
-  // Your code here
-  
+// function coinCollector(numCoins) {
+//   // Your code here
+//   let coinsArray = []
+//   count = 0;
+//   return function coinAdder(coin){
+//     coinsArray.push(coin)
+//     if(count === numCoins-1){
+//       return coinsArray;
+//     }
+//     count++;
+//     return coinAdder;
+//   }
+// }
 
+function coinCollector(numCoins) {
+  let coinsArray = [];
+  return function (coins) {
+    coinsArray.push(coins);
+    return coinsArray;
+  };
 }
+
+let oneCoin = coinCollector(1); // returns a function
+console.log(oneCoin(10)); // prints [10]
+
+  let threeCoins = coinCollector(3); // returns a function
+  console.log(threeCoins(25)); // returns a function
+  console.log(threeCoins(5)); // returns a function
+  console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

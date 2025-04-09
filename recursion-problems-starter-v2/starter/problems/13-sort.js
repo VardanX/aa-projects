@@ -23,7 +23,10 @@ sort([]); // []
 
 function sort(nums, sorted = []) {
   // your code here
+  
+
 }
+console.log(sort([4, 1, 6, 3, 1, 7]));
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
